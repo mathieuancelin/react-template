@@ -16,8 +16,8 @@
   "dependencies": {
     "babel-runtime": "^5.8.29",
     "moment": "^2.10.6",
-    "react": "^0.14.1",
-    "react-dom": "^0.14.1"
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
   },
   "devDependencies": {
     "babel": "^5.8.29",
