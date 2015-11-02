@@ -2,15 +2,14 @@ import React from 'react';
 import moment from 'moment';
 
 export default React.createClass({
+  propTypes: {
+    width: React.PropTypes.number.isRequired,
+    height: React.PropTypes.number.isRequired,
+  },
   getInitialState() {
     return {
-      time: moment()
+      time: moment(),
     };
-  },
-  updateTime() {
-    this.setState({
-      time: moment()
-    });
   },
   componentDidMount() {
     this.interval = setInterval(this.updateTime, 1000);
@@ -26,6 +25,11 @@ export default React.createClass({
   },
   secondsRotation() {
     return `rotate(${6 * this.state.time.seconds()})`;
+  },
+  updateTime() {
+    this.setState({
+      time: moment(),
+    });
   },
   render() {
     return (
@@ -43,5 +47,5 @@ export default React.createClass({
         </svg>
       </div>
     );
-  }
+  },
 });

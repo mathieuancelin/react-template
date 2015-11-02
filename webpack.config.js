@@ -40,7 +40,7 @@ module.exports = {
       {
         test: /\.js|\.jsx|\.es6$/,
         exclude: /node_modules/,
-        loader: 'babel-loader?stage=0&optional=runtime'
+        loader: 'babel-loader'
       }
     ]
   },

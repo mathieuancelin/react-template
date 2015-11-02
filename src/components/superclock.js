@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 
 import Date from './date';
 import Time from './time';
@@ -16,5 +15,5 @@ export default React.createClass({
         <Clock width="120" height="120"/>
       </div>
     );
-  }
+  },
 });
