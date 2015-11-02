@@ -16,3 +16,23 @@ In dev mode, you can open your app at `http://localhost:8080/public/`.
 Each time you change your Javascript code, everything will be re-processed and the app will reload automatically using webpack-dev-server and embedded live reload.
 
 You should use Node 4 or 5 to run the project.
+
+Dependencies
+==============
+
+* for dev and build
+  * `webpack`
+  * `webpack-dev-server`
+* for runtime
+  * `babel-runtime`
+  * `react`
+  * `react-dom`
+* for tests
+  * `mocha`
+  * `chai`
+  * `jsdom`
+  * `react-addons-test-utils`
+* for linting
+  * `eslint`
+  * `eslint-config-airbnb`
+  * `eslint-plugin-react`
