@@ -1,5 +1,5 @@
 React-template
------------------
+==============
 
 This is a very basic project using React that you can use to bootstrap your own projects. Everything is already setup for dev. test and linting. This project is using ES2015 syntax with the help of Babel.
 
@@ -18,7 +18,7 @@ Each time you change your Javascript code, everything will be re-processed and t
 You should use Node 4 or 5 to run the project.
 
 Dependencies
-==============
+------------
 
 * for dev and build
   * `webpack` : the bundler, uses `webpack.config.js`
