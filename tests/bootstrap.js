@@ -1,3 +1,5 @@
+/* eslint no-console: 0 */
+
 import jsdom from 'jsdom';
 
 export function setupEnv() {
