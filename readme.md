@@ -21,18 +21,19 @@ Dependencies
 ==============
 
 * for dev and build
-  * `webpack`
-  * `webpack-dev-server`
+  * `webpack` : the bundler, uses `webpack.config.js`
+  * `webpack-dev-server` : the dev HTTP server
+  * `babel` : to transform ES2015 code into ES5 code, uses `.babelrc`
 * for runtime
-  * `babel-runtime`
+  * `babel-runtime` : ES2015 runtime
   * `react`
-  * `react-dom`
+  * `react-dom` : to use React in an DOM environment
 * for tests
-  * `mocha`
-  * `chai`
-  * `jsdom`
-  * `react-addons-test-utils`
+  * `mocha` : the test runner
+  * `chai` : for assertions
+  * `jsdom` : for headless browser testing
+  * `react-addons-test-utils` : for React related tests
 * for linting
-  * `eslint`
-  * `eslint-config-airbnb`
-  * `eslint-plugin-react`
+  * `eslint` : the linter, uses `.eslinrc` and `.eslintignore`
+  * `eslint-config-airbnb` : for ES2015 related rules
+  * `eslint-plugin-react` : for React related rules

@@ -1,7 +1,7 @@
 import jsdom from 'jsdom';
 
 export function setupEnv() {
-  const doc = jsdom.jsdom('<!doctype html><html><body><div id="app"></div></body></html>');
+  const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
   const win = doc.defaultView;
   function propagateToGlobal(window) {
     for (const key in window) {

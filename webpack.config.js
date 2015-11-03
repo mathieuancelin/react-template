@@ -1,18 +1,23 @@
 var webpack = require('webpack');
 
+// basic plugin used in every env
 var plugins = [
+  // dedupe js modules in the final build file
   new webpack.optimize.DedupePlugin(),
   new webpack.optimize.OccurenceOrderPlugin(),
+  // so you can use __DEV__ and process.env.NODE_ENV variable in your javascript code
   new webpack.DefinePlugin({
     '__DEV__': process.env.NODE_ENV === 'production' ? false : true,
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   })
 ];
 
+// add some plugins in dev mode
 if (process.env.NODE_ENV === 'dev') {
   plugins.push(new webpack.HotModuleReplacementPlugin());
   plugins.push(new webpack.NoErrorsPlugin());
 } else {
+  // in prod mode, uglify everything
   plugins.push(new webpack.optimize.UglifyJsPlugin({
     compressor: {
       screw_ie8: true,
@@ -23,21 +28,20 @@ if (process.env.NODE_ENV === 'dev') {
 
 module.exports = {
   output: {
-    path: './dist/',
-    publicPath: '/assets/',
-    filename: 'app.js',
-    library: 'App',
-    libraryTarget: 'umd'
+    path: './dist/',  // final build will be output in the dist folder
+    publicPath: '/assets/', // when in dev mode, the build will be in /assest/app.js
+    filename: 'app.js', // the file name
+    library: 'App', // the global name in a non commonjs env (ie. the browser)
+    libraryTarget: 'umd' // build as UMD
   },
-  entry: {
-    'app': ['./src/main.js']
-  },
+  entry: './src/main.js', // the main entry point for the build
   resolve: {
-    extensions: ['', '.js', '.jsx', 'es6']
+    extensions: ['', '.js', '.jsx', 'es6'] // all these files will be considered as modules
   },
   module: {
     loaders: [
       {
+        // add a loader to transform ES2015 code into ES5 code with babel
         test: /\.js|\.jsx|\.es6$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
