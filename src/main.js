@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import SuperClock from './components/superclock';
 
-require('babel/polyfill');
+require('babel-polyfill');
 
 export function init() {
   ReactDOM.render(<SuperClock />, document.getElementById('app'));

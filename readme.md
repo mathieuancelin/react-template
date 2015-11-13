@@ -1,7 +1,7 @@
 React-template
 ==============
 
-This is a very basic project using React that you can use to bootstrap your own projects. Everything is already setup for dev. test and linting. This project is using ES2015 syntax with the help of Babel.
+This is a very basic project using React that you can use to bootstrap your own projects. Everything is already setup for dev, test and linting. This project is using ES2015 syntax with the help of Babel 6.
 
 first run `npm install`
 
@@ -24,6 +24,10 @@ Dependencies
   * `webpack` : the bundler, uses `webpack.config.js`
   * `webpack-dev-server` : the dev HTTP server
   * `babel` : to transform ES2015 code into ES5 code, uses `.babelrc`
+  * `babel-cli` : to transform ES2015 code into ES5 code from CLI, uses `.babelrc`
+  * `babel-preset-react` : preset to use react with babel 6
+  * `babel-preset-es2015` : preset to use ES2015 with babel 6
+  * `babel-preset-stage-0` : preset to use ES2015 with experimental features
 * for runtime
   * `babel-runtime` : ES2015 runtime
   * `react`
