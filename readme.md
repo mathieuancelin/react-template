@@ -1,6 +1,8 @@
 React-template
 ==============
 
+[![build status][1]][2]
+
 This is a very basic project using React that you can use to bootstrap your own projects. Everything is already setup for dev, test and linting. This project is using ES2015 syntax with the help of Babel 6.
 
 first run `npm install`
@@ -41,3 +43,7 @@ Dependencies
   * `eslint` : the linter, uses `.eslinrc` and `.eslintignore`
   * `eslint-config-airbnb` : for ES2015 related rules
   * `eslint-plugin-react` : for React related rules
+
+
+[1]: https://api.travis-ci.org/mathieuancelin/react-template.svg
+[2]: https://api.travis-ci.org/mathieuancelin/react-template
