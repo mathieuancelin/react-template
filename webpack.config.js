@@ -27,6 +27,7 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 module.exports = {
+  devtool: 'eval',
   output: {
     path: './dist/',  // final build will be output in the dist folder
     publicPath: '/assets/', // when in dev mode, the build will be in /assest/app.js
@@ -34,16 +35,17 @@ module.exports = {
     library: 'App', // the global name in a non commonjs env (ie. the browser)
     libraryTarget: 'umd' // build as UMD
   },
-  entry: './src/main.js', // the main entry point for the build
+  devServer: {
+    contentBase: './public/',
+  },
+  entry: [
+    './src/main.js' // the main entry point for the build
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx', 'es6'] // all these files will be considered as modules
   },
   module: {
     loaders: [
-      {
-          loader: 'react-hot',
-          exclude: /node_modules/
-      },
       {
         // add a loader to transform ES2015 code into ES5 code with babel
         test: /\.js|\.jsx|\.es6$/,

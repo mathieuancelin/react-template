@@ -14,7 +14,7 @@ then you can run the following commands :
 * `npm run lint` : lint your javascript files using eslint
 * `npm test` : run your tests
 
-In dev mode, you can open your app at `http://localhost:8080/public/`.
+In dev mode, you can open your app at `http://localhost:8080/`.
 Each time you change your Javascript code, everything will be re-processed and the app will reload automatically using webpack-dev-server and embedded live reload.
 
 You should use Node 4 or 5 to run the project.
