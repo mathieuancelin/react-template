@@ -30,6 +30,7 @@ Dependencies
   * `babel-preset-react` : preset to use react with babel 6
   * `babel-preset-es2015` : preset to use ES2015 with babel 6
   * `babel-preset-stage-0` : preset to use ES2015 with experimental features
+  * `react-hot-loader` : plugin to hot reload react components
 * for runtime
   * `babel-runtime` : ES2015 runtime
   * `react`

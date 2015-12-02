@@ -41,6 +41,10 @@ module.exports = {
   module: {
     loaders: [
       {
+          loader: 'react-hot',
+          exclude: /node_modules/
+      },
+      {
         // add a loader to transform ES2015 code into ES5 code with babel
         test: /\.js|\.jsx|\.es6$/,
         exclude: /node_modules/,
