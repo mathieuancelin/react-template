@@ -27,7 +27,6 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 module.exports = {
-  devtool: 'eval',
   output: {
     path: './dist/',  // final build will be output in the dist folder
     publicPath: '/assets/', // when in dev mode, the build will be in /assest/app.js

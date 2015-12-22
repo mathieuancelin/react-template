@@ -13,6 +13,8 @@ then you can run the following commands :
 * `npm run build` : create a single minified JS file in `dist` if `test` and `lint` passes
 * `npm run lint` : lint your javascript files using eslint
 * `npm test` : run your tests
+* `npm run test:watch` : run your tests in watch mode
+* `npm run test:cov` : run test code coverage 
 
 In dev mode, you can open your app at `http://localhost:8080/`.
 Each time you change your Javascript code, everything will be re-processed and the app will reload automatically using webpack-dev-server and embedded live reload.

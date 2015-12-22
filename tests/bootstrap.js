@@ -2,8 +2,8 @@
 
 import jsdom from 'jsdom';
 
-export function setupEnv() {
-  const doc = jsdom.jsdom('<!doctype html><html><body></body></html>');
+export function bootstrapEnv(body = '') {
+  const doc = jsdom.jsdom(`<!doctype html><html><body>${body}</body></html>`);
   const win = doc.defaultView;
   function propagateToGlobal(window) {
     for (const key in window) {
