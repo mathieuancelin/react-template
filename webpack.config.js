@@ -13,12 +13,7 @@ var plugins = [
     }
   })
 ];
-
-// add some plugins in dev mode
-if (process.env.NODE_ENV === 'dev') {
-  plugins.push(new webpack.HotModuleReplacementPlugin());
-  plugins.push(new webpack.NoErrorsPlugin());
-} else {
+if (process.env.NODE_ENV === 'production') {
   // in prod mode, uglify everything
   plugins.push(new webpack.optimize.UglifyJsPlugin({
     compressor: {
@@ -26,6 +21,10 @@ if (process.env.NODE_ENV === 'dev') {
       warnings: false
     }
   }));
+} else {
+  // add some plugins in dev mode
+  plugins.push(new webpack.HotModuleReplacementPlugin());
+  plugins.push(new webpack.NoErrorsPlugin());
 }
 
 module.exports = {

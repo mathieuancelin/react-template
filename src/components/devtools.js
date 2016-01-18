@@ -1,8 +1,13 @@
+import React from 'react';
+
 if (process.env.NODE_ENV === 'production') {
   console.log('[PROD_ENV] do not use Redux DevTools');
-  module.exports = { DevTools: null };
+  module.exports = { DevTools: React.createClass({
+    render() {
+      return null;
+    },
+  }) };
 } else {
-  const React = require('react');
   const createDevTools = require('redux-devtools').createDevTools;
   const LogMonitor = require('redux-devtools-log-monitor');
   const DockMonitor = require('redux-devtools-dock-monitor');
