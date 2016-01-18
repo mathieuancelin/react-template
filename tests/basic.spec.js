@@ -4,11 +4,11 @@ import React from 'react';
 import chai, { expect } from 'chai';
 import ReactTestUtils from 'react-addons-test-utils';
 
-import Clicker from '../src/components/clicker';
+import { SimpleClicker } from '../src/components/simpleclicker';
 
 describe('Clicker', () => {
   it('changes count after click', () => {
-    const clicker = ReactTestUtils.renderIntoDocument(<Clicker />);
+    const clicker = ReactTestUtils.renderIntoDocument(<SimpleClicker />);
     const span = ReactTestUtils.findRenderedDOMComponentWithTag(clicker, 'span');
     const button = ReactTestUtils.findRenderedDOMComponentWithTag(clicker, 'button');
 
