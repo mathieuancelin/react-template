@@ -38,7 +38,7 @@ module.exports = {
     contentBase: './public/',
   },
   entry: [
-    './src/main.js' // the main entry point for the build
+    './src/app.js' // the main entry point for the build
   ],
   resolve: {
     extensions: ['', '.js', '.jsx', 'es6'] // all these files will be considered as modules
