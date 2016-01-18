@@ -14,7 +14,7 @@ then you can run the following commands :
 * `npm run lint` : lint your javascript files using eslint
 * `npm test` : run your tests
 * `npm run test:watch` : run your tests in watch mode
-* `npm run test:cov` : run test code coverage 
+* `npm run test:cov` : run test code coverage
 
 In dev mode, you can open your app at `http://localhost:8080/`.
 Each time you change your Javascript code, everything will be re-processed and the app will reload automatically using webpack-dev-server and embedded live reload.
@@ -47,6 +47,24 @@ Dependencies
   * `eslint-config-airbnb` : for ES2015 related rules
   * `eslint-plugin-react` : for React related rules
 
+Complex version
+--------------
+
+this template includes a more complex version of the app, using `redux`, `react-redux` and `react-router`.
+You can use this part of the template when you are building a large/spa app.
+
+To use this version go to the `/public/index.html` file, uncomment `App.initComplex()` and comment `App.init()`.
+
+The dependencies for the complex version are :
+
+* for dev
+  * `redux-devtools` : some nice tools for debugging redux app with time travel
+  * `redux-devtools-dock-monitor` : container to move the log monitor in the screen
+  * `redux-devtools-log-monitor` : UI for time travel
+* for runtime
+  * `redux`: a predictable state container for JavaScript apps
+  * `react-redux`: a bridge to use Redux with React
+  * `react-router`: a nice router to build SPA
 
 [1]: https://api.travis-ci.org/mathieuancelin/react-template.svg
 [2]: https://api.travis-ci.org/mathieuancelin/react-template

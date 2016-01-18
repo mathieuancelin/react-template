@@ -5,7 +5,7 @@ import { Clicker } from '../components/clicker';
 import { SimpleClicker } from '../components/simpleclicker';
 
 import { configureCounterStore } from '../store';
-import { DevTools } from '../utils/devtools';
+import { DevTools } from '../components/devtools';
 
 const store = configureCounterStore({ counter: 0 });
 
