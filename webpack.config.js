@@ -8,7 +8,9 @@ var plugins = [
   // so you can use __DEV__ and process.env.NODE_ENV variable in your javascript code
   new webpack.DefinePlugin({
     '__DEV__': process.env.NODE_ENV === 'production' ? false : true,
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    'process.env': {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+    }
   })
 ];
 
