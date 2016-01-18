@@ -3,10 +3,11 @@ import { Link } from 'react-router';
 import { Provider } from 'react-redux';
 import { Clicker } from '../components/clicker';
 import { SimpleClicker } from '../components/simpleclicker';
-import { createStore } from 'redux';
-import { counter } from '../reducers/counter';
 
-const store = createStore(counter);
+import { configureCounterStore } from '../store';
+import { DevTools } from '../utils/devtools';
+
+const store = configureCounterStore({ counter: 0 });
 
 export const App = React.createClass({
   render() {
@@ -16,6 +17,7 @@ export const App = React.createClass({
           <Clicker />
           <SimpleClicker />
           <Link to="/about">About</Link>
+          <DevTools />
         </div>
       </Provider>
     );

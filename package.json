@@ -11,7 +11,7 @@
     "test:watch": "npm test -- --watch",
     "test:covtext": "rm -rf ./coverage && NODE_ENV=test babel-node $(npm bin)/isparta cover --report text $(npm bin)/_mocha -- --compilers js:babel-core/register tests/index.js",
     "test:cov": "rm -rf ./coverage && NODE_ENV=test babel-node $(npm bin)/isparta cover --report html $(npm bin)/_mocha -- --compilers js:babel-core/register tests/index.js",
-    "start": "NODE_ENV=dev webpack-dev-server -d --colors --hot --inline --progress",
+    "start": "NODE_ENV=dev webpack-dev-server -d --colors --hot --inline --progress --port 8080",
     "bundle": "NODE_ENV=production webpack -p --colors --progress",
     "lib": "rm -rf ./lib && babel src --out-dir lib",
     "build": "npm run test && npm run test:covtext && npm run lint && npm run lib && npm run bundle"
@@ -45,6 +45,8 @@
     "jsdom": "^7.2.2",
     "mocha": "^2.3.4",
     "react-addons-test-utils": "^0.14.6",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.2",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
   }

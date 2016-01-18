@@ -3,48 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>App</title>
-    <style>
-      .clock {
-        position: relative;
-        width: 100%;
-        height: 0;
-        margin: 20px;
-      }
-      svg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-      .clock-face {
-        stroke: #333;
-        fill: white;
-      }
-      .minor {
-        stroke: #999;
-        stroke-width: 0.5;
-      }
-      .major {
-        stroke: #333;
-        stroke-width: 1;
-      }
-      .hour {
-        stroke: #333;
-      }
-      .minute {
-        stroke: #666;
-      }
-      .second, .second-counterweight {
-        stroke: rgb(180,0,0);
-      }
-      .second-counterweight {
-        stroke-width: 3;
-      }
-    </style>
   </head>
   <body>
     <div id="app"></div>
     <script src="/assets/app.js"></script>
     <script>
+      // init the simple version of the app without react-router and redux
+      // App.initSimple();
+      // init the complex version of the app with react-router and redux
       App.init();
     </script>
   </body>

@@ -5,13 +5,14 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as CounterActions from '../actions/counter';
 
-const InternalClicker = React.createClass({
+const clicker = React.createClass({
   propTypes: {
     increment: PropTypes.func.isRequired,
     counter: PropTypes.number.isRequired,
   },
   render() {
     const { increment, counter } = this.props;
+    console.log(counter);
     return (
       <div>
         <span>You have clicked {counter} times</span>
@@ -34,4 +35,4 @@ function mapDispatchToProps(dispatch) {
 export const Clicker = connect(
   mapStateToProps,
   mapDispatchToProps
-)(InternalClicker);
+)(clicker);
