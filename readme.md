@@ -9,7 +9,7 @@ first run `npm install`
 
 then you can run the following commands :
 
-* `npm start` : run the dev mode build with a dev server at `http://localhost:8080/public/`
+* `npm start` : run the dev mode build with a dev server at `http://localhost:8080/`
 * `npm run build` : create a single minified JS file in `dist` if `test` and `lint` passes
 * `npm run lint` : lint your javascript files using eslint
 * `npm test` : run your tests
@@ -35,7 +35,7 @@ Dependencies
   * `react-hot-loader` : plugin to hot reload react components
 * for runtime
   * `babel-runtime` : ES2015 runtime
-  * `react`
+  * `react` : The React ;-)
   * `react-dom` : to use React in an DOM environment
 * for tests
   * `mocha` : the test runner
@@ -46,25 +46,6 @@ Dependencies
   * `eslint` : the linter, uses `.eslinrc` and `.eslintignore`
   * `eslint-config-airbnb` : for ES2015 related rules
   * `eslint-plugin-react` : for React related rules
-
-Complex version
---------------
-
-this template includes a more complex version of the app, using `redux`, `react-redux` and `react-router`.
-You can use this part of the template when you are building a large/spa app.
-
-To use this version go to the `/public/index.html` file, uncomment `App.initComplex()` and comment `App.init()`.
-
-The dependencies for the complex version are :
-
-* for dev
-  * `redux-devtools` : some nice tools for debugging redux app with time travel
-  * `redux-devtools-dock-monitor` : container to move the log monitor in the screen
-  * `redux-devtools-log-monitor` : UI for time travel
-* for runtime
-  * `redux`: a predictable state container for JavaScript apps
-  * `react-redux`: a bridge to use Redux with React
-  * `react-router`: a nice router to build SPA
 
 [1]: https://api.travis-ci.org/mathieuancelin/react-template.svg
 [2]: https://api.travis-ci.org/mathieuancelin/react-template
