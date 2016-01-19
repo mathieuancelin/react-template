@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   output: {
     path: './dist/',  // final build will be output in the dist folder
-    publicPath: '/dist/', // when in dev mode, the build will be in /assest/app.js
+    publicPath: '/dist/', // when in dev mode, the build will be in /dist/app.js
     filename: 'app.js', // the file name
     library: 'App', // the global name in a non commonjs env (ie. the browser)
     libraryTarget: 'umd' // build as UMD
